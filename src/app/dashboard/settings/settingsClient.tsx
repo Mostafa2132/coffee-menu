@@ -15,12 +15,12 @@ import { yupResolver } from "@hookform/resolvers/yup";
 
 const schema = yup.object({
   store_name:    yup.string().required().min(2),
-  phone:         yup.string().nullable().optional(),
-  address:       yup.string().nullable().optional(),
-  facebook:      yup.string().nullable().optional(),
-  instagram:     yup.string().nullable().optional(),
-  tiktok:        yup.string().nullable().optional(),
-  opening_hours: yup.string().nullable().optional(),
+  phone:         yup.string().nullable().default(""),
+  address:       yup.string().nullable().default(""),
+  facebook:      yup.string().nullable().default(""),
+  instagram:     yup.string().nullable().default(""),
+  tiktok:        yup.string().nullable().default(""),
+  opening_hours: yup.string().nullable().default(""),
 });
 
 type FormValues = yup.InferType<typeof schema>;

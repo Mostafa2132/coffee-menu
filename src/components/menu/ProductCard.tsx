@@ -47,7 +47,7 @@ function ProductImage({ src, alt }: { src: string | null; alt: string }) {
   );
 }
 
-export function ProductCard({ product }: { product: Product }) {
+export function ProductCard({ product, onSelect }: { product: Product; onSelect?: () => void }) {
   const dispatch = useAppDispatch();
   const favIds = useAppSelector((s) => s.favorites.productIds);
   const isFav = favIds.includes(product.id);
@@ -74,7 +74,7 @@ export function ProductCard({ product }: { product: Product }) {
   }, []);
 
   return (
-    <div ref={cardRef} className="h-full">
+    <div ref={cardRef} className="h-full cursor-pointer" onClick={onSelect}>
       <Card className="group overflow-hidden h-full flex flex-col glass-panel hover:border-coffee-400/50 transition-colors duration-500 shadow-lg hover:shadow-coffee-500/20 rounded-[2rem]">
         <div className="relative aspect-[4/3] overflow-hidden rounded-t-[2rem]">
           <ProductImage src={product.image} alt={product.title} />
@@ -102,6 +102,7 @@ export function ProductCard({ product }: { product: Product }) {
             aria-label="Toggle favorite"
             onClick={(e) => {
               e.preventDefault();
+              e.stopPropagation();
               dispatch(toggleFavorite(product.id));
               // Small pop animation on click
               gsap.fromTo(e.currentTarget, 

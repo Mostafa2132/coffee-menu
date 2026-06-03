@@ -31,15 +31,19 @@ function CoffeeBean({ position, rotation, scale }: any) {
 }
 
 function Scene() {
-  const beans = Array.from({ length: 15 }).map((_, i) => ({
-    position: [
-      (Math.random() - 0.5) * 15,
-      (Math.random() - 0.5) * 20,
-      (Math.random() - 0.5) * 10 - 5,
-    ] as [number, number, number],
-    rotation: [Math.random() * Math.PI, Math.random() * Math.PI, 0] as [number, number, number],
-    scale: (Math.random() * 0.4 + 0.3) * (i % 3 === 0 ? [1, 0.7, 0.5] : [0.8, 1, 0.6]),
-  }));
+  const beans = Array.from({ length: 15 }).map((_, i) => {
+    const factor = Math.random() * 0.4 + 0.3;
+    const baseScale = i % 3 === 0 ? [1, 0.7, 0.5] : [0.8, 1, 0.6];
+    return {
+      position: [
+        (Math.random() - 0.5) * 15,
+        (Math.random() - 0.5) * 15,
+        (Math.random() - 0.5) * 10 - 5
+      ] as [number, number, number],
+      rotation: [Math.random() * Math.PI, Math.random() * Math.PI, 0] as [number, number, number],
+      scale: [baseScale[0] * factor, baseScale[1] * factor, baseScale[2] * factor] as [number, number, number],
+    };
+  });
 
   return (
     <>
