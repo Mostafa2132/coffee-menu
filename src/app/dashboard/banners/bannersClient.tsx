@@ -14,7 +14,7 @@ import type { Banner } from "@/types/models";
 
 const schema = yup.object({
   title: yup.string().required().min(2),
-  subtitle: yup.string().optional(),
+  subtitle: yup.string().default(""),
   image: yup.string().required().url(),
   active: yup.boolean().default(true),
 });
