@@ -1,0 +1,67 @@
+{
+  "brand": {
+    "name": "Caffè Aurelia",
+    "tagline": "Premium coffee, crafted daily."
+  },
+  "nav": {
+    "home": "Home",
+    "menu": "Menu",
+    "favorites": "Favorites",
+    "about": "About",
+    "contact": "Contact",
+    "dashboard": "Dashboard"
+  },
+  "common": {
+    "search": "Search",
+    "viewMenu": "View Menu",
+    "orderNow": "Order Now",
+    "available": "Available",
+    "unavailable": "Unavailable",
+    "price": "Price",
+    "category": "Category",
+    "sort": "Sort",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add"
+  },
+  "home": {
+    "heroTitle": "A modern coffee experience",
+    "heroSubtitle": "Scan the QR, browse the menu, and discover new favorites with smooth, premium interactions."
+  },
+  "dashboard": {
+    "products": {
+      "title": "Products",
+      "subtitle": "Add, edit, delete products and toggle availability.",
+      "addProduct": "Add product",
+      "editProduct": "Edit product",
+      "allProducts": "All products",
+      "title": "Title",
+      "slug": "Slug",
+      "price": "Price",
+      "category": "Category",
+      "available": "Available",
+      "featured": "Featured",
+      "add": "Add",
+      "saveChanges": "Save changes",
+      "cancel": "Cancel",
+      "edit": "Edit",
+      "delete": "Delete",
+      "selectCategory": "Select…",
+      "categoryRequired": "Category is required",
+      "priceRequired": "Price is required",
+      "useLowercase": "Use lowercase letters, numbers, and dashes only",
+      "productAdded": "Product added",
+      "productUpdated": "Product updated",
+      "productDeleted": "Product deleted",
+      "failedToSave": "Failed to save",
+      "failedToDelete": "Failed to delete",
+      "imageUploadNote": "Image & gallery uploads are next (Supabase Storage).",
+      "unavailable": "Unavailable",
+      "couldNotLoadProducts": "Could not load products. Check Supabase setup.",
+      "deleteConfirm": "Delete \"{title}\"?"
+    }
+  }
+}
+

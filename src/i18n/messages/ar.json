@@ -1,0 +1,67 @@
+{
+  "brand": {
+    "name": "كافيه أورليا",
+    "tagline": "قهوة فاخرة تُحضَّر يوميًا."
+  },
+  "nav": {
+    "home": "الرئيسية",
+    "menu": "المنيو",
+    "favorites": "المفضلة",
+    "about": "من نحن",
+    "contact": "تواصل",
+    "dashboard": "لوحة التحكم"
+  },
+  "common": {
+    "search": "بحث",
+    "viewMenu": "عرض المنيو",
+    "orderNow": "اطلب الآن",
+    "available": "متوفر",
+    "unavailable": "غير متوفر",
+    "price": "السعر",
+    "category": "التصنيف",
+    "sort": "ترتيب",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "add": "إضافة"
+  },
+  "home": {
+    "heroTitle": "تجربة قهوة عصرية",
+    "heroSubtitle": "امسح الـ QR، تصفح المنيو، واكتشف مفضلات جديدة بتجربة فاخرة وسلسة."
+  },
+  "dashboard": {
+    "products": {
+      "title": "المنتجات",
+      "subtitle": "إضافة، تعديل، حذف المنتجات وتغيير التوفر.",
+      "addProduct": "إضافة منتج",
+      "editProduct": "تعديل المنتج",
+      "allProducts": "جميع المنتجات",
+      "title": "العنوان",
+      "slug": "الرابط المختصر",
+      "price": "السعر",
+      "category": "التصنيف",
+      "available": "متوفر",
+      "featured": "مميز",
+      "add": "إضافة",
+      "saveChanges": "حفظ التغييرات",
+      "cancel": "إلغاء",
+      "edit": "تعديل",
+      "delete": "حذف",
+      "selectCategory": "اختر…",
+      "categoryRequired": "التصنيف مطلوب",
+      "priceRequired": "السعر مطلوب",
+      "useLowercase": "استخدم أحرفاً صغيرة وأرقاماً وشرطات فقط",
+      "productAdded": "تمت إضافة المنتج",
+      "productUpdated": "تم تحديث المنتج",
+      "productDeleted": "تم حذف المنتج",
+      "failedToSave": "فشل الحفظ",
+      "failedToDelete": "فشل الحذف",
+      "imageUploadNote": "تحميل الصور والمعرض قادم (تخزين Supabase).",
+      "unavailable": "غير متوفر",
+      "couldNotLoadProducts": "تعذر تحميل المنتجات. تحقق من إعداد Supabase.",
+      "deleteConfirm": "حذف \"{title}\"؟"
+    }
+  }
+}
+

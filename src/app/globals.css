@@ -1,26 +1,82 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Premium Dark Coffee Theme (Default) */
+  --background: #0d0906;
+  --foreground: #f5eedf;
+  --muted: rgba(245, 238, 223, 0.6);
+  --card: rgba(25, 17, 12, 0.7);
+  --card-border: rgba(212, 163, 115, 0.15);
+  --shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+  --ring: rgba(212, 163, 115, 0.4);
+
+  /* Golden Coffee Palette */
+  --coffee-50: #fbf5eb;
+  --coffee-100: #f4e5ce;
+  --coffee-200: #e8cba5;
+  --coffee-300: #dbaf78;
+  --coffee-400: #d09452;
+  --coffee-500: #c67d35;
+  --coffee-600: #b1652d;
+  --coffee-700: #934c28;
+  --coffee-800: #783e25;
+  --coffee-900: #603421;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-muted: var(--muted);
+  --color-card: var(--card);
+  --color-card-border: var(--card-border);
+  --shadow-card: var(--shadow);
+  --ring-coffee: var(--ring);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-coffee-50: var(--coffee-50);
+  --color-coffee-100: var(--coffee-100);
+  --color-coffee-200: var(--coffee-200);
+  --color-coffee-300: var(--coffee-300);
+  --color-coffee-400: var(--coffee-400);
+  --color-coffee-500: var(--coffee-500);
+  --color-coffee-600: var(--coffee-600);
+  --color-coffee-700: var(--coffee-700);
+  --color-coffee-800: var(--coffee-800);
+  --color-coffee-900: var(--coffee-900);
+
+  --font-sans: var(--font-alexandria);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-alexandria), ui-sans-serif, system-ui, -apple-system,
+    Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+* {
+  outline-color: var(--ring);
+}
+
+/* Custom Scrollbar for a premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--coffee-800);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--coffee-600);
+}
+
+/* Glassmorphism utilities */
+.glass-panel {
+  background: rgba(25, 17, 12, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 163, 115, 0.1);
 }
