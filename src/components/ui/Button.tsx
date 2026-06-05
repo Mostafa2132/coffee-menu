@@ -1,7 +1,6 @@
 "use client";
 
 import type { ButtonHTMLAttributes } from "react";
-import { motion } from "framer-motion";
 import { cn } from "@/lib/cn";
 
 type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -33,11 +32,9 @@ export function Button({
   ...props
 }: Props) {
   return (
-    <motion.button
-      whileTap={{ scale: 0.98 }}
-      whileHover={{ y: -1 }}
+    <button
       className={cn(
-        "inline-flex items-center justify-center gap-2 font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--ring)] disabled:opacity-50 disabled:pointer-events-none",
+        "inline-flex items-center justify-center gap-2 font-medium transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--ring)] disabled:opacity-50 disabled:pointer-events-none active:scale-[0.98] hover:-translate-y-px",
         variants[variant],
         sizes[size],
         className,
@@ -46,4 +43,3 @@ export function Button({
     />
   );
 }
-
